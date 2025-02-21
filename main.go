@@ -27,3 +27,15 @@ const (
 func Print(content string, color Color) {
 	fmt.Printf("%s%s%s", color, content, DEFAULT)
 }
+
+var list = []Color{RED, YELLOW, GREEN, BLUE, MAGENTA, CYAN, DARKRED, DARKBLUE, DARKCYAN, DARKYELLOW, DARKGREEN, WHITE, BLACK, DARKGRAY, GRAY}
+var current = 0
+
+func GetNext() Color {
+	next := list[current]
+	current++
+	if current > len(list) {
+		current = 0
+	}
+	return next
+}
