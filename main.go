@@ -34,7 +34,7 @@ var current = 0
 func GetNext() Color {
 	next := list[current]
 	current++
-	if current > len(list) {
+	if current >= len(list) {
 		current = 0
 	}
 	return next
